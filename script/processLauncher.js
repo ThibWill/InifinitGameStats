@@ -31,10 +31,10 @@ async function infinitMoneyParadoxProcesses(nbProcesses, gambleMoney, moneyToRea
   }
 
   function writeResults(finalSum) {
-    if (results.inifnitMoneyParadox[gambleMoney]) {
-      results.inifnitMoneyParadox[gambleMoney].push(finalSum);
+    if (results.infinitMoneyParadox[gambleMoney]) {
+      results.infinitMoneyParadox[gambleMoney].push(finalSum);
     } else {
-      results.inifnitMoneyParadox[gambleMoney] = [finalSum];
+      results.infinitMoneyParadox[gambleMoney] = [finalSum];
     }
 
     fs.writeFileSync(`${__dirname}/../data/results.json`, JSON.stringify(results));
